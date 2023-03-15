@@ -29,7 +29,7 @@ function App() {
 
   const [quotes, setQuotes] = useState([]);
   const [quotesNum, setQuotesNum] = useState(Math.floor(Math.random() * 10)); //10은 명언 개수
-
+  const h = 1;
   useEffect(() => {
     const localSavedUsername = localStorage.getItem("user");
     setSavedUsername((prev) => localSavedUsername);
