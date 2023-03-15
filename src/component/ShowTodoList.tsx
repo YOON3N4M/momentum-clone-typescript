@@ -61,7 +61,6 @@ function ShowTodoList({
                     className={
                       "todo-del-btn" + (dotVisible ? "" : " opacity-zero")
                     }
-                    alt=""
                     onClick={() => deleteTodo(item)}
                   >
                     x
@@ -104,7 +103,6 @@ function ShowTodoList({
                     className={
                       "todo-del-btn" + (dotVisible ? "" : " opacity-zero")
                     }
-                    alt=""
                     onClick={() => deleteTodo(item)}
                   >
                     x

@@ -1,13 +1,26 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import "../css/Todo.css";
-import ShowTodoList from "./ShowTodoList";
-import TodoHeader from "./TodoHeader";
-function Todo({ componentHide }) {
+import ShowTodoList from "./ShowTodoList.tsx";
+import TodoHeader from "./TodoHeader.tsx";
+
+interface nTodo {
+  id: number;
+  value: string;
+  Done: boolean;
+}
+
+type TodoList = nTodo[];
+
+interface Props {
+  componentHide: { [key: string]: Boolean };
+}
+
+function Todo({ componentHide }: Props) {
   const [todoShow, setTodoShow] = useState(false);
   const [todo, setTodo] = useState("");
-  const [todoList, setTodoList] = useState([]);
-  const [inboxList, setInboxList] = useState([]);
-  const [doneList, setDoneList] = useState([]);
+  const [todoList, setTodoList] = useState<TodoList>([]);
+  const [inboxList, setInboxList] = useState<TodoList>([]);
+  const [doneList, setDoneList] = useState<TodoList>([]);
   const [chooseBox, setChooseBox] = useState(true);
   const [chosenBox, setChosenBox] = useState("Inbox");
 
@@ -45,7 +58,7 @@ function Todo({ componentHide }) {
   const onSubmit = (event) => {
     event.preventDefault();
     if (todo !== "" && chosenBox === "Inbox") {
-      const newTodo = {
+      const newTodo: nTodo = {
         id: Date.now(),
         value: todo,
         Done: false,

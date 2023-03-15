@@ -1,8 +1,18 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../css/Weather.css";
 
+interface WeatherObj {
+  name: string;
+  weather: [{ main: string }];
+  main: { temp: number };
+}
+
 function Weather({ componentHide }) {
-  const [weatherInfo, setWeatherInfo] = useState([]);
+  const [weatherInfo, setWeatherInfo] = useState<WeatherObj>({
+    name: "",
+    weather: [{ main: "" }],
+    main: { temp: 0 },
+  });
   const [loading, setLoading] = useState(true); // 해당 로딩이 없으면 api를 가져오기전에 div를 뿌리려고 해서 에러가 남.
 
   useEffect(() => {
@@ -24,7 +34,7 @@ function Weather({ componentHide }) {
       console.log("위치 정보가 없어 날씨 데이터를 제공할 수 없습니다.");
     }
   }, []);
-
+  console.log(weatherInfo);
   return (
     <div>
       {loading ? null : (

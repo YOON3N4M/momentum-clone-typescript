@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
-import SettingContents from "./SettingContents";
+import React, { useState, useEffect } from "react";
+import SettingContents from "./SettingContents.tsx";
 import "../css/Setting.css";
 import settingIcon from "../img/setting_icon.png";
 

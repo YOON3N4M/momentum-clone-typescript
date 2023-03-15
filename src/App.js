@@ -1,11 +1,11 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import "./css/App.css";
-import Todo from "./component/Todo";
-import Weather from "./component/Weather";
+import Todo from "./component/Todo.tsx";
+import Weather from "./component/Weather.tsx";
 import Background from "./component/Background.tsx";
 import Search from "./component/Search";
-import Setting from "./component/Setting";
+import Setting from "./component/Setting.tsx";
 import Greeting from "./component/Greeting";
 import Clock from "./component/Clock";
 import Login from "./component/Login";
