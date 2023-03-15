@@ -1,0 +1,162 @@
+#todoBox {
+  width: 270px;
+  min-height: 200px;
+  max-height: 450px;
+  position: absolute;
+  background-color: white;
+  z-index: 5;
+  border-radius: 5px;
+  bottom: 3rem;
+  right: 1rem;
+  overflow: hidden;
+  text-shadow: 0 1px 5px rgb(0 0 0 / 10%);
+}
+.margin-left {
+  padding-left: 10px;
+}
+
+.styled-btn {
+  background-color: rgba(0, 0, 0, 0);
+  border: 0px;
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  text-shadow: 0 1px 5px rgb(0 0 0 / 10%);
+}
+.styled-btn-black {
+  background-color: rgba(0, 0, 0, 0);
+  border: 0px;
+  color: black;
+  font-size: 20px;
+  font-weight: 100;
+  cursor: pointer;
+}
+#todo-header {
+  width: 270px;
+  min-height: 35px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  justify-content: space-between;
+}
+#todo-list {
+  width: 270px;
+  min-height: 150px;
+  max-height: 360px;
+  font-size: 1rem;
+  overflow-y: scroll;
+}
+#todo-checkbox {
+  margin-right: 8px;
+  cursor: pointer;
+}
+#todo-item {
+  font-size: 1rem;
+  padding-bottom: 10px;
+}
+
+#todo-input-box {
+  width: 270px;
+  max-height: 35px;
+  min-height: 35px;
+  display: flex;
+  align-items: center;
+}
+#todo-input {
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  width: 240px;
+}
+.done {
+  color: gray;
+  text-decoration: line-through;
+}
+
+#if-no-todo {
+  margin: 0 auto;
+  position: absolute;
+  left: 20%;
+  top: 40%;
+}
+#if-no-todo > * {
+  font-size: 30px;
+  color: gray;
+  font-weight: 500;
+  opacity: 30%;
+}
+
+#todo-dot-btn {
+  margin-right: 30px;
+  cursor: pointer;
+
+  filter: invert(62%) sepia(0%) saturate(4058%) hue-rotate(31deg)
+    brightness(93%) contrast(98%);
+  opacity: 50%;
+  width: 25px;
+  height: 25px;
+}
+
+.todo-dot-btn-smaller {
+  margin-right: 30px;
+  cursor: pointer;
+
+  filter: invert(62%) sepia(0%) saturate(4058%) hue-rotate(31deg)
+    brightness(93%) contrast(98%);
+  opacity: 50%;
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+}
+
+.drop-down-todo {
+  position: absolute;
+  width: 100px;
+  height: 20px;
+  background-color: rgb(236, 236, 236);
+  top: 40px;
+  left: 150px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.drop-down-todo-list {
+  position: absolute;
+  width: 100px;
+  height: 20px;
+  background-color: rgb(236, 236, 236);
+  top: 70px;
+  left: 150px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.drop-down-todo-item {
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+.todo-item-box {
+  display: flex;
+  word-break: break-all;
+}
+
+.todo-item-span-box {
+  width: 181px;
+}
+
+.todo-del-btn {
+  color: gray;
+  opacity: 40%;
+  cursor: pointer;
+  margin-left: 15px;
+}

@@ -1,0 +1,41 @@
+#clock-box {
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+#clock {
+  font-size: 12rem;
+  letter-spacing: -5px;
+  color: white;
+}
+
+#clock-option-img {
+  width: 30px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+#clock-option-box {
+  position: relative;
+}
+.drop-down {
+  position: absolute;
+  width: 156px;
+  height: 39px;
+  background-color: white;
+  top: 29px;
+  left: 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#clock-option-span {
+  font-size: 0.875rem;
+  margin-left: 10px;
+}
+#toggle-switch-box {
+  margin-right: 6px;
+}

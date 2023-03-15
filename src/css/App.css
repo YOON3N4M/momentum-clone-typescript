@@ -1,0 +1,599 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+  text-shadow: 0 1px 5px rgb(0 0 0 / 30%);
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  margin: 0;
+  overflow-wrap: break-word;
+  color: white;
+}
+ul {
+  list-style: none;
+}
+.styled-scroll::-webkit-scrollbar {
+  width: 8px; /* 스크롤바의 너비 */
+}
+
+.styled-scroll::-webkit-scrollbar-thumb {
+  height: 10%; /* 스크롤바의 길이 */
+  background: rgba(128, 128, 128, 0.66); /* 스크롤바의 색상 */
+
+  border-radius: 10px;
+}
+
+.styled-scroll::-webkit-scrollbar-track {
+  background: rgba(99, 99, 100, 0.1); /*스크롤바 뒷 배경 색상*/
+}
+
+.apps {
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+}
+.apps,
+.full {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.top-row {
+  height: 60px;
+  display: flex;
+  align-items: flex-start;
+  flex: 0 0 auto;
+}
+
+.top-left {
+  height: 60px;
+  flex-grow: 0;
+}
+
+.top-center {
+  justify-content: center;
+  flex-grow: 0;
+}
+.top-right {
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+  text-align: right;
+  min-width: 0;
+}
+.top-left,
+.top-right {
+  position: relative;
+  display: inline-flex;
+  flex: 1 1 auto;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  flex: 1 1 auto;
+
+  flex-direction: column;
+  text-align: center;
+}
+
+.center-below {
+  flex: 1.5 1.5 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.center-above {
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.bottom-row {
+  display: flex;
+  justify-content: space-between;
+  min-height: 44.5px;
+}
+.hidden {
+  display: none;
+}
+.background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: -1;
+  opacity: 80%;
+}
+
+.delButton {
+  background-color: aliceblue;
+  color: #1e6b7b;
+  position: relative;
+  border: none;
+  display: inline-block;
+  padding: 3px 3px;
+  border-radius: 15px;
+  font-family: "paybooc-Light", sans-serif;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.25s;
+  margin-left: 10px;
+  margin-top: 10px;
+  font-size: 1pt;
+}
+
+.bottom-row > div {
+  margin-bottom: 20px;
+}
+.bottom-left {
+  margin-left: 20px;
+}
+.bottom-right {
+  margin-right: 20px;
+}
+
+#todoBtn {
+  background-color: #a65a5a00;
+  border: #a65a5a00;
+}
+
+.todo-box {
+  position: relative;
+}
+
+.fadeup {
+  animation: fadeup 0.5s ease-in-out;
+  -moz-animation: fadeup 0.5s ease-in-out;
+  /* Firefox */
+  -webkit-animation: fadeup 0.5s ease-in-out;
+  /* Safari and Chrome */
+  -o-animation: fadeup 0.5s ease-in-out;
+}
+@keyframes fadeup {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 100%;
+    transform: none;
+  }
+}
+
+@-moz-keyframes fadeup {
+  /* Firefox */
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 100%;
+    transform: none;
+  }
+}
+
+@-webkit-keyframes fadeup {
+  /* Safari and Chrome */
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 100%;
+    transform: none;
+  }
+}
+
+@-o-keyframes fadeup {
+  /* Opera */
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 100%;
+    transform: none;
+  }
+}
+.fadein {
+  animation: fadein 0.3s ease;
+  -moz-animation: fadein 0.3s ease;
+  /* Firefox */
+  -webkit-animation: fadein 0.3s ease;
+  /* Safari and Chrome */
+  -o-animation: fadein 0.3s ease;
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 100%;
+  }
+}
+
+@-moz-keyframes fadein {
+  /* Firefox */
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 100%;
+  }
+}
+
+@-webkit-keyframes fadein {
+  /* Safari and Chrome */
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 100%;
+  }
+}
+
+@-o-keyframes fadein {
+  /* Opera */
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 100%;
+  }
+}
+.fadeout {
+  opacity: 0%;
+  animation: fadeout 1s ease;
+  -moz-animation: fadeout 1s ease;
+  /* Firefox */
+  -webkit-animation: fadeout 1s ease;
+  /* Safari and Chrome */
+  -o-animation: fadeout 1s ease;
+}
+@keyframes fadeout {
+  from {
+    opacity: 100%;
+  }
+
+  to {
+    opacity: 0%;
+  }
+}
+
+@-moz-keyframes fadeout {
+  /* Firefox */
+  from {
+    opacity: 100%;
+  }
+
+  to {
+    opacity: 0%;
+  }
+}
+
+@-webkit-keyframes fadeout {
+  /* Safari and Chrome */
+  from {
+    opacity: 100%;
+  }
+
+  to {
+    opacity: 0%;
+  }
+}
+
+@-o-keyframes fadeout {
+  /* Opera */
+  from {
+    opacity: 100%;
+  }
+
+  to {
+    opacity: 0%;
+  }
+}
+
+.visible {
+  visibility: visible;
+}
+.invisible {
+  display: none;
+}
+.font-shadow10 {
+  text-shadow: 0 1px 5px rgb(0 0 0 / 10%);
+}
+.font-shadow30 {
+  text-shadow: 0 1px 5px rgb(0 0 0 / 30%);
+}
+.border-bottom-input {
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-bottom: 3px solid #fff;
+  outline: none;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+#app-cover {
+  background-color: black;
+  z-index: 100;
+}
+
+.no-shadow {
+  text-shadow: 0 0px 0px rgb(0 0 0 / 0%);
+}
+
+.quote {
+  color: white;
+}
+.display-flex {
+  display: flex;
+}
+.blank {
+  width: 59.38px;
+  height: 24.5px;
+}
+
+/*토글 스위치 스타일*/
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 21px;
+  margin-right: 5px;
+}
+.switch-smaller {
+  position: relative;
+  display: inline-block;
+  width: 28px;
+  height: 17px;
+  margin-right: 5px;
+}
+.switch input,
+.switch-smaller input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.slider-smaller {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  left: 4px;
+  bottom: 3px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider-smaller:before {
+  position: absolute;
+  content: "";
+  height: 12px;
+  width: 12px;
+  left: 3px;
+  bottom: 2.5px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.switch input:checked + .slider {
+  background-color: #5bdb5f;
+}
+
+.switch input:focus + .slider {
+  box-shadow: 0 0 1px #5bdb5f;
+}
+
+.switch input:checked + .slider:before {
+  -webkit-transform: translateX(16px);
+  -ms-transform: translateX(16px);
+  transform: translateX(16px);
+}
+
+.switch-smaller input:checked + .slider-smaller {
+  background-color: #5bdb5f;
+}
+
+.switch-smaller input:focus + .slider-smaller {
+  box-shadow: 0 0 1px #5bdb5f;
+}
+
+.switch-smaller input:checked + .slider-smaller:before {
+  -webkit-transform: translateX(10px);
+  -ms-transform: translateX(10px);
+  transform: translateX(10px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.slider-smaller.round {
+  border-radius: 34px;
+}
+
+.slider-smaller.round:before {
+  border-radius: 50%;
+}
+
+.opacity-zero {
+  opacity: 0% !important;
+}
+.opacity-hundred {
+  opacity: 100% !important;
+}
+.img-shadow {
+  filter: drop-shadow(1px 1px 1px rgb(193, 193, 193));
+}

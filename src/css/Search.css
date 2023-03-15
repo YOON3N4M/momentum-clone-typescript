@@ -1,0 +1,28 @@
+#search-icon {
+  width: 21px;
+  height: 21px;
+  color: white;
+  margin-top: 20px;
+  cursor: pointer;
+}
+#search-box {
+  display: flex;
+}
+.no-outline-input {
+  outline: none;
+}
+.search {
+  background-color: rgba(0, 0, 0, 0%);
+  color: white;
+  font-weight: 500px;
+  font-size: 20px;
+  display: inline;
+  margin: 20px 0 0 20px;
+  border: 0px;
+  width: 170px;
+}
+.search:hover {
+  background-color: rgba(0, 0, 0, 5%);
+  border-bottom: 3px;
+  border-color: white;
+}
