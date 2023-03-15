@@ -3,14 +3,13 @@ import { useEffect, useState } from "react";
 import "./css/App.css";
 import Todo from "./component/Todo";
 import Weather from "./component/Weather";
-import Background from "./component/Background";
+import Background from "./component/Background.tsx";
 import Search from "./component/Search";
 import Setting from "./component/Setting";
 import Greeting from "./component/Greeting";
 import Clock from "./component/Clock";
 import Login from "./component/Login";
 import Quotes from "./component/Quotes";
-``;
 
 function App() {
   const [img, setImg] = useState([]); // Background.js에서 API로 받아오는 이미지

@@ -1,5 +1,5 @@
 import "../css/Clock.css";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import dotIcon from "../img/dot_icon.png";
 
 function Clock({ componentHide }) {
