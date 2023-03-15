@@ -10,6 +10,7 @@ import Greeting from "./component/Greeting";
 import Clock from "./component/Clock";
 import Login from "./component/Login";
 import Quotes from "./component/Quotes";
+``;
 
 function App() {
   const [img, setImg] = useState([]); // Background.js에서 API로 받아오는 이미지
@@ -29,7 +30,7 @@ function App() {
 
   const [quotes, setQuotes] = useState([]);
   const [quotesNum, setQuotesNum] = useState(Math.floor(Math.random() * 10)); //10은 명언 개수
-  const h = 1;
+
   useEffect(() => {
     const localSavedUsername = localStorage.getItem("user");
     setSavedUsername((prev) => localSavedUsername);
