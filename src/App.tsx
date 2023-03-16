@@ -4,12 +4,13 @@ import "./css/App.css";
 import Todo from "./component/Todo.tsx";
 import Weather from "./component/Weather.tsx";
 import Background from "./component/Background.tsx";
-import Search from "./component/Search";
+import Search from "./component/Search.tsx";
 import Setting from "./component/Setting.tsx";
-import Greeting from "./component/Greeting";
-import Clock from "./component/Clock";
-import Login from "./component/Login";
-import Quotes from "./component/Quotes";
+import Greeting from "./component/Greeting.tsx";
+import Clock from "./component/Clock.tsx";
+import Login from "./component/Login.tsx";
+import Quotes from "./component/Quotes.tsx";
+import { SettingObj } from "./interfaces/userInterfaces";
 
 function App() {
   const [img, setImg] = useState([]); // Background.js에서 API로 받아오는 이미지
@@ -18,7 +19,7 @@ function App() {
   const [savedUsername, setSavedUsername] = useState("");
   const [isImgLoading, setIsimgLoading] = useState(false);
   const [coverHide, setCoverHide] = useState(false);
-  const [componentHide, setComponentHide] = useState({
+  const [componentHide, setComponentHide] = useState<SettingObj>({
     showSearch: true,
     showWeather: true,
     showClock: true,
@@ -32,12 +33,12 @@ function App() {
 
   useEffect(() => {
     const localSavedUsername = localStorage.getItem("user");
-    setSavedUsername((prev) => localSavedUsername);
 
     if (localSavedUsername == null) {
       setIsLogin(false); // 로컬스토리지에 user가 null이 아니면 isLogin = true
     } else if (localSavedUsername !== null) {
       setIsLogin(true); // 로컬스토리지에 user가 null이면 isLogin = false
+      setSavedUsername((prev) => localSavedUsername);
     }
   }, []);
 

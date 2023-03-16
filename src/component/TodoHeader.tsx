@@ -1,5 +1,18 @@
 import React, { useEffect, useState } from "react";
 import dotIcon from "../img/dot_icon.png";
+import { TodoListT } from "./Todo";
+
+interface Props {
+  changeBox: () => void;
+  chosenBox: string;
+  todoList: TodoListT;
+  doneList: TodoListT;
+  inboxList: TodoListT;
+  setTodoList: (value: TodoListT) => void;
+  setInboxList: (value: TodoListT) => void;
+  setDoneList: (value: TodoListT) => void;
+}
+
 function TodoHeader({
   changeBox,
   chosenBox,
@@ -9,7 +22,7 @@ function TodoHeader({
   setTodoList,
   setInboxList,
   setDoneList,
-}) {
+}: Props) {
   const [openDropDown, setOpenDropDown] = useState(false);
 
   function clear() {

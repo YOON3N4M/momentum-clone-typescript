@@ -1,6 +1,6 @@
 import "../css/Greeting.css";
 
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
 function Greeting({ savedUsername, componentHide }) {
   const [sayHi, setSayHi] = useState("");

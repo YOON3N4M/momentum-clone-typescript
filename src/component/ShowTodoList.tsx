@@ -1,5 +1,18 @@
 import dotIcon from "../img/dot_icon.png";
 import React, { useState, useEffect } from "react";
+import { TodoListT } from "./Todo";
+
+interface Props {
+  todoList: TodoListT;
+  doneList: TodoListT;
+  inboxList: TodoListT;
+  chooseBox: boolean;
+  setTodoList: (value: TodoListT) => void;
+  setInboxList: (value: TodoListT) => void;
+  setDoneList: (value: TodoListT) => void;
+  TODO_KEY: string;
+}
+
 function ShowTodoList({
   todoList,
   chooseBox,
@@ -9,7 +22,7 @@ function ShowTodoList({
   setInboxList,
   setDoneList,
   TODO_KEY,
-}) {
+}: Props) {
   function stateChange(item) {
     if (item.Done === false) {
       item.Done = true;
@@ -25,7 +38,7 @@ function ShowTodoList({
     setTodoList((prev) => prev.filter((todo) => todo.id !== item.id));
   }
   const [dotVisible, setDotVisible] = useState(false);
-  const [showDropDown, setShowDropDown] = useState(false);
+
   return (
     <div id="todo-list" className="styled-scroll">
       <ul>

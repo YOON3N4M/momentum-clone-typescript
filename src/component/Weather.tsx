@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "../css/Weather.css";
+import { SettingObj } from "../interfaces/userInterfaces";
 
 interface WeatherObj {
   name: string;
@@ -7,7 +8,11 @@ interface WeatherObj {
   main: { temp: number };
 }
 
-function Weather({ componentHide }) {
+interface Props {
+  componentHide: SettingObj;
+}
+
+function Weather({ componentHide }: Props) {
   const [weatherInfo, setWeatherInfo] = useState<WeatherObj>({
     name: "",
     weather: [{ main: "" }],

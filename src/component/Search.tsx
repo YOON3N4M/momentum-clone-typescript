@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import "../css/Search.css";
 import searchIcon from "../img/search_icon.png";
 function Search({ componentHide }) {
